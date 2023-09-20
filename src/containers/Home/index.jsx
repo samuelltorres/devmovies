@@ -1,19 +1,49 @@
+import Button from '../../components/Button';
 import api from '../../services/api';
-import { Background } from './styles';
+import { useState, useEffect } from 'react';
+import { Background, Container, Info, Poster, ContainerButton } from './styles';
 
 function Home() {
-	async function getMovies() {
-		const data = await api.get('/movie/popular');
+	const [movie, setMovie] = useState();
 
-		console.log(data);
-	}
-	getMovies();
+	useEffect(() => {
+		async function getMovies() {
+			const {
+				data: { results }
+			} = await api.get('/movie/popular');
+
+			setMovie(results[1]);
+		}
+		getMovies();
+	}, []);
 
 	return (
-		<Background img="https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg">
-			<h1>Home</h1>
-			<p>essa é a home</p>
-		</Background>
+		<>
+			{movie && (
+				<Background
+					img={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+				>
+					<Container>
+						<Info>
+							<h1>{movie.title}</h1>
+							<p>{movie.overview}</p>
+							<ContainerButton>
+								<Button red color="#e21">
+									Assista agora
+								</Button>
+								<Button>Trailer</Button>
+							</ContainerButton>
+						</Info>
+						<Poster>
+							<img
+								src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+								alt="poster-do-filme"
+							/>
+						</Poster>
+					</Container>
+				</Background>
+			)}
+		</>
 	);
 }
 
