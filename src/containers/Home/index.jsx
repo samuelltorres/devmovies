@@ -1,4 +1,5 @@
 import api from '../../services/api';
+import { Background } from './styles';
 
 function Home() {
 	async function getMovies() {
@@ -9,10 +10,10 @@ function Home() {
 	getMovies();
 
 	return (
-		<div>
+		<Background img="https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg">
 			<h1>Home</h1>
 			<p>essa é a home</p>
-		</div>
+		</Background>
 	);
 }
 
