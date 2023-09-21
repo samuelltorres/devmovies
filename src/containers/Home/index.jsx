@@ -18,7 +18,7 @@ function Home() {
 				data: { results }
 			} = await api.get('/movie/popular');
 
-			setMovie(results[2]);
+			setMovie(results[1]);
 		}
 
 		async function getTopMovies() {
