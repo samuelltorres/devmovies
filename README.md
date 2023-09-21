@@ -11,3 +11,4 @@ react router dom
 axios
 styled components
 react hooks
+swiper
