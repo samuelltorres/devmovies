@@ -12,3 +12,4 @@ react hooks
 axios
 styled components
 swiper
+react icons

@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import { Background, Container, Info, Poster, ContainerButton } from './styles';
 import Slider from '../../components/Slider';
 import { getImages } from '../../services/utils/getImages';
+import Modal from '../../components/Modal';
 
 function Home() {
+	const [showModal, setShowModal] = useState(false);
 	const [movie, setMovie] = useState();
 	const [topMovies, setTopMovies] = useState();
 	const [topSeries, setTopSeries] = useState();
@@ -64,6 +66,9 @@ function Home() {
 		<>
 			{movie && (
 				<Background img={getImages(movie.backdrop_path)}>
+					{showModal && (
+						<Modal movieId={movie.id} setShowModal={setShowModal} />
+					)}
 					<Container>
 						<Info>
 							<h1>{movie.title}</h1>
@@ -72,7 +77,7 @@ function Home() {
 								<Button red color="#e21">
 									Assista agora
 								</Button>
-								<Button>Trailer</Button>
+								<Button onClick={() => setShowModal(true)}>Trailer</Button>
 							</ContainerButton>
 						</Info>
 						<Poster>
