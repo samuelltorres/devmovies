@@ -12,7 +12,10 @@ export const Container = styled.div`
 
 	background-color: ${(props) =>
 		props.changeBackground ? '#1a1a1a' : 'transparent'};
-	transition: background-color 0.5s ease-in-out;
+	box-shadow: ${(props) =>
+		props.changeBackground ? '0px 0px 45px 0px rgba(0, 0, 0, 1)' : 'none'};
+
+	transition: all 0.5s ease-in-out;
 
 	img {
 		width: 300px;
