@@ -1,20 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
-import api from '../../services/api';
 import { Container, Background } from './styles';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { getMovieVideos } from '../../services/getData';
 
 function Modal({ movieId, setShowModal }) {
 	const [video, setVideo] = useState();
 
 	useEffect(() => {
 		async function getVideos() {
-			const {
-				data: { results }
-			} = await api.get(`/movie/${movieId}/videos`);
-
-			console.log(results[1]);
-			setVideo(results[0]);
+			setVideo(await getMovieVideos(movieId));
 		}
 		getVideos();
 	}, []);
@@ -29,7 +24,7 @@ function Modal({ movieId, setShowModal }) {
 					<iframe
 						height="500px"
 						width="100%"
-						src={`https://www.youtube.com/embed/${video.key}`}
+						src={`https://www.youtube.com/embed/${video[0].key}`}
 						title="YouTube Video Player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowfullscreen

@@ -7,8 +7,6 @@ function Header() {
 	const [changeBackground, setChangeBackground] = useState(false);
 	const { pathname } = useLocation();
 
-	console.log(window.pageYOffset);
-
 	window.onscroll = () => {
 		if (!changeBackground && window.pageYOffset > 80) {
 			setChangeBackground(true);
@@ -20,7 +18,9 @@ function Header() {
 
 	return (
 		<Container changeBackground={changeBackground}>
-			<img src={Logo} alt="logo-dev-movies" />
+			<Link to="/">
+				<img src={Logo} alt="logo-dev-movies" />
+			</Link>
 			<Menu>
 				<Li isActive={pathname === '/'}>
 					<Link to="/">Home</Link>

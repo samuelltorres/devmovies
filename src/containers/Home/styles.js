@@ -1,4 +1,25 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const showToRight = keyframes`
+  	from {
+		opacity: 0;
+		transform: translate3d(-30px, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+`;
+const showToLeft = keyframes`
+  	from {
+		opacity: 0;
+		transform: translate3d(30px, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+`;
 
 export const Background = styled.div`
 	background-image: url(${(props) => props.img});
@@ -33,6 +54,8 @@ export const Info = styled.div`
 	z-index: 2;
 	padding: 20px;
 
+	animation: ${showToLeft} 1s forwards;
+
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
@@ -54,6 +77,8 @@ export const Poster = styled.div`
 		width: 400px;
 		border-radius: 16px;
 		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+
+		animation: ${showToRight} 1s forwards;
 	}
 `;
 
