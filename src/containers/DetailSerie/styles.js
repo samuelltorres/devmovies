@@ -135,5 +135,9 @@ export const ContainerMovies = styled.div`
 		border-radius: 8px;
 		border: 1px solid #272727;
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+		@media (max-width: 400px) {
+			font-size: 1rem;
+		}
 	}
 `;
