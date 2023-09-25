@@ -49,7 +49,7 @@ function Detail() {
 							<img src={getImages(serie.poster_path)} alt="" />
 						</Cover>
 						<Info>
-							<h2>{serie.title}</h2>
+							<h2>{serie.name}</h2>
 							<SpanGenres genres={serie.genres} />
 							<p>{serie.overview}</p>
 							<div>

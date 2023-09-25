@@ -72,6 +72,9 @@ export const Cover = styled.div`
 		box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 		animation: ${showToRight} 1.5s forwards;
 	}
+	@media (max-width: 1350px) {
+		display: none;
+	}
 `;
 
 export const Info = styled.div`
@@ -96,6 +99,9 @@ export const Info = styled.div`
 		color: #ededed;
 		margin-bottom: 30px;
 	}
+	@media (max-width: 800px) {
+		width: 100%;
+	}
 `;
 
 export const ContainerMovies = styled.div`
@@ -119,14 +125,15 @@ export const ContainerMovies = styled.div`
 		color: #f7f7f7;
 		font-size: 1.25rem;
 		margin-bottom: 16px;
+
+		@media (max-width: 400px) {
+			font-size: 1rem;
+		}
 	}
 
 	iframe {
 		border-radius: 8px;
 		border: 1px solid #272727;
-		/* border: none; */
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
 	}
 `;
-
-// export const ContainerSimilar = styled.div``;

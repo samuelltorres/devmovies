@@ -130,6 +130,10 @@ export const ContainerMovies = styled.div`
 		color: #f7f7f7;
 		font-size: 1.25rem;
 		margin-bottom: 16px;
+
+		@media (max-width: 400px) {
+			font-size: 1rem;
+		}
 	}
 
 	iframe {
