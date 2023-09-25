@@ -57,6 +57,10 @@ export const Container = styled.div`
 	align-items: center;
 	height: 100%;
 	margin-top: -100px;
+
+	@media (max-width: 820px) {
+		/* justify-content: flex-start; */
+	}
 `;
 
 export const Cover = styled.div`
@@ -72,6 +76,10 @@ export const Cover = styled.div`
 		box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 		animation: ${showToRight} 1.5s forwards;
 	}
+
+	@media (max-width: 1350px) {
+		display: none;
+	}
 `;
 
 export const Info = styled.div`
@@ -85,7 +93,7 @@ export const Info = styled.div`
 	animation: ${showToLeft} 1.5s forwards;
 
 	h2 {
-		font-size: 3rem;
+		font-size: 2rem;
 		font-weight: 700;
 		color: #f7f7f7;
 		margin-bottom: 30px;
@@ -95,6 +103,9 @@ export const Info = styled.div`
 		font-weight: 500;
 		color: #ededed;
 		margin-bottom: 30px;
+	}
+	@media (max-width: 800px) {
+		width: 100%;
 	}
 `;
 
@@ -128,5 +139,3 @@ export const ContainerMovies = styled.div`
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
 	}
 `;
-
-// export const ContainerSimilar = styled.div``;
