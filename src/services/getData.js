@@ -64,3 +64,30 @@ export async function getMovieById(movieId) {
 
 	return data;
 }
+
+export async function getSerieCredit(movieId) {
+	const {
+		data: { cast }
+	} = await api.get(`/tv/${movieId}/credits`);
+
+	return cast;
+}
+export async function getSerieSimilar(movieId) {
+	const {
+		data: { results }
+	} = await api.get(`/tv/${movieId}/similar`);
+
+	return results;
+}
+export async function getSerieById(movieId) {
+	const { data } = await api.get(`/tv/${movieId}`);
+
+	return data;
+}
+export async function getSerieVideos(movieId) {
+	const {
+		data: { results }
+	} = await api.get(`/tv/${movieId}/videos`);
+
+	return results;
+}

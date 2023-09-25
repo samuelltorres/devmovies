@@ -27,7 +27,7 @@ function Home() {
 					<img
 						key={movie.id}
 						src={getImages(movie.poster_path || movie.profile_path || '')}
-						onClick={() => navigate(`/detalhe/${movie.id}`)}
+						onClick={() => navigate(`/filme/${movie.id}`)}
 						alt=""
 					/>
 				))}

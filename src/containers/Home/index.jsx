@@ -62,7 +62,7 @@ function Home() {
 								<Button
 									red
 									color="#e21"
-									onClick={() => navigate(`/detalhe/${movie.id}`)}
+									onClick={() => navigate(`/filme/${movie.id}`)}
 								>
 									Assista agora
 								</Button>
