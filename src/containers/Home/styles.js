@@ -48,6 +48,12 @@ export const Container = styled.div`
 	justify-content: space-around;
 	align-items: center;
 	gap: 60px;
+
+	@media (max-width: 950px) {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 `;
 
 export const Info = styled.div`
@@ -61,6 +67,10 @@ export const Info = styled.div`
 		font-weight: 700;
 		color: #f8f8f8;
 		margin-bottom: 30px;
+
+		@media (max-width: 950px) {
+			font-size: 2rem;
+		}
 	}
 
 	p {
@@ -68,6 +78,10 @@ export const Info = styled.div`
 		font-weight: 500;
 		color: #f1f1f1;
 		margin-bottom: 50px;
+
+		@media (max-width: 950px) {
+			font-size: 1rem;
+		}
 	}
 `;
 
@@ -79,6 +93,10 @@ export const Poster = styled.div`
 		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
 
 		animation: ${showToRight} 1s forwards;
+	}
+
+	@media (max-width: 950px) {
+		display: none;
 	}
 `;
 

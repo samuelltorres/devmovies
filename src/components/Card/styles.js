@@ -15,9 +15,15 @@ export const Container = styled.div`
 		height: 375px;
 		margin-bottom: 15px;
 		object-fit: cover;
+
+		@media (max-width: 950px) {
+			width: 150px;
+			height: 225px;
+		}
 	}
 	h3 {
 		color: #ededed;
+		font-size: 0.75rem;
 	}
 
 	margin-bottom: 23px;

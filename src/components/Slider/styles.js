@@ -16,6 +16,10 @@ export const Container = styled.div`
 
 	.swiper-slide {
 		width: 250px;
+
+		@media (max-width: 950px) {
+			width: 150px;
+		}
 	}
 
 	.swiper-pagination-bullet {
