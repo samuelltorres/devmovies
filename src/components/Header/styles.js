@@ -19,6 +19,16 @@ export const Container = styled.div`
 
 	img {
 		width: 300px;
+
+		@media (max-width: 700px) {
+			display: none;
+		}
+	}
+	@media (max-width: 700px) {
+		justify-content: center;
+	}
+	@media (max-width: 400px) {
+		height: 60px;
 	}
 `;
 
@@ -56,5 +66,9 @@ export const Li = styled.li`
 	&:hover::after {
 		width: 100%;
 		background: #e21;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 1rem;
 	}
 `;
