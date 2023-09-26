@@ -13,8 +13,9 @@ export const Container = styled.div`
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(5, auto);
+	justify-content: center;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 40px;
 	margin-top: 100px;
 
 	img {
@@ -30,7 +31,7 @@ export const Container = styled.div`
 			rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 			rgba(150, 150, 150, 0.3) 0px 30px 60px -30px;
 
-		@media (max-width: 800px) {
+		@media (max-width: 1150px) {
 			width: 150px;
 			height: 225px;
 		}
@@ -46,22 +47,26 @@ export const Container = styled.div`
 		margin-top: 0px;
 	}
 
-	@media (max-width: 1400px) {
-		gap: 5px;
-	}
-	@media (max-width: 1300px) {
+	@media (max-width: 1430px) {
 		grid-template-columns: repeat(4, auto);
 	}
-	@media (max-width: 1050px) {
-		grid-template-columns: repeat(3, auto);
+	@media (max-width: 1150px) {
+		grid-template-columns: repeat(5, auto);
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 930px) {
 		grid-template-columns: repeat(4, auto);
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 750px) {
 		grid-template-columns: repeat(3, auto);
+		gap: 15px;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 550px) {
 		grid-template-columns: repeat(2, auto);
+		justify-content: space-evenly;
+	}
+	@media (max-width: 350px) {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-evenly;
+		gap: 5px;
 	}
 `;
