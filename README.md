@@ -55,7 +55,7 @@ Para clonar e executar este aplicativo, você precisará do [Git](https://git-sc
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/joaoliveirapb/todo.git
+$ git clone https://github.com/samuelltorres/devmovies.git
 
 # Instale as dependencias
 $ yarn
