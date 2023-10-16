@@ -45,7 +45,7 @@
 - Filmes e series mais votados
 - Filmes e series mais populares
 - Artistas mais populares
-- Fetalhes sobre o filme/serie e seus trailers. 
+- Detalhes sobre o filme/serie e seus trailers. 
 
 <!-- COMO USAR -->
 
